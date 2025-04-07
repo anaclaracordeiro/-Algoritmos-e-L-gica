@@ -1,0 +1,113 @@
+					              -------ANOTAÇÕES SOBRE C--------
+
+
+MEU CODIGO: 
+//Verifica se VarA é maior que VarB
+
+#include <stdio.h>
+
+int main(){
+
+    int varA, varB;
+
+    printf("Digite o primeiro valor:\n");
+    scanf("%d",&varA);
+
+    printf("Digite o segundo valor:\n");
+    scanf("%d",&varB);
+
+    if(varA >= varB){}
+        printf("O maior valor é: %d\n",varA);
+
+    else(varB >= varA){}
+        printf("O maior valor é: %d\n",varB);
+
+    return 0;
+}
+
+CODIGO CORRIGIDO:
+#include <stdio.h>
+
+int main() {
+    int varA, varB;
+
+    printf("Digite o primeiro valor:\n");
+    scanf("%d", &varA);
+
+    printf("Digite o segundo valor:\n");
+    scanf("%d", &varB);
+
+    if (varA >= varB) {
+        printf("O maior valor é: %d\n", varA);
+    } else {
+        printf("O maior valor é: %d\n", varB);
+    }
+
+    return 0;
+}
+
+******não é necessario coloca de que forma sera no else, sendo diferente do if ele já será executado de forma oposta********
+
+								xxxxxxxxx
+
+	
+//verifica se são iguais
+#include <stdio.h>
+
+int main() {
+    int varA, varB;
+
+    printf("Digite o primeiro valor:\n");
+    scanf("%d", &varA);
+
+    printf("Digite o segundo valor:\n");
+    scanf("%d", &varB);
+
+    if (varA > varB) {
+        printf("O maior valor é: %d\n", varA);
+    } else if (varA < varB) {
+        printf("O maior valor é: %d\n", varB);
+    } else {
+        printf("Os dois valores são iguais.\n");
+    }
+
+    return 0;
+}
+
+*******************************************************************************************************************************************
+Estrutura Condicional:
+if: Verifica a primeira condição.
+else if: Verifica uma condição adicional, mas somente se a primeira condição do if for falsa.
+else: É usado para cobrir todos os outros casos possíveis, ou seja, quando nenhuma das condições anteriores (if ou else if) foi atendida.
+
+
+Por que usar else if neste caso?
+Aqui estamos comparando dois valores (varA e varB) e temos três possibilidades:
+
+varA é maior que varB (condição 1).
+
+varA é menor que varB (condição 2).
+
+varA é igual a varB (nenhuma das condições anteriores é verdadeira, o que leva ao else).
+
+Para cobrir essas três situações de forma clara e eficiente, o fluxo de decisão precisa ser estruturado da seguinte forma:
+
+Primeiro: Verificamos se varA é maior que varB (com o if).
+
+Depois: Verificamos se varA é menor que varB (com o else if).
+
+Finalmente: Caso nenhuma das duas condições anteriores seja verdadeira, concluímos que varA é igual a varB, o que é tratado pelo else.
+
+Porque não só usar if e else?
+Se você usasse apenas if e else, o fluxo de comparação não seria preciso o suficiente para identificar as três possibilidades distintas 
+(maior, menor ou igual). O else if é necessário para que você possa fazer uma comparação mais detalhada entre as duas variáveis.
+
+Exemplo de como seria com apenas if e else (não recomendado):
+if (varA > varB) {
+    printf("O maior valor é: %d\n", varA);
+} else {
+    // Aqui, o único caso possível seria varA <= varB, o que inclui
+    // tanto varA < varB quanto varA == varB.
+    printf("O maior valor é: %d\n", varB);
+}
+***************************************************************************************************************************************
